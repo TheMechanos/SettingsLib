@@ -1,0 +1,14 @@
+version: 4.0.2
+maintainers:
+  - Sebastian Koczur <themechanos@gmail.com>
+description: >-
+  Library helps in manage application settings
+
+repository: "https://github.com/TheMechanos/SettingsLib.git"
+
+
+dependencies:
+  SKVector:
+    git: https://github.com/TheMechanos/SKVector.git
+    version: 1.0.0
+  bblanchon/arduinojson: "^7.4.3"

@@ -1,0 +1,29 @@
+{
+    "name": "SettingsLib",
+    "version": "4.0.2",
+    "description": "Library helps in manage application settings",
+    "keywords": "settings, parameters, preferences",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TheMechanos/SettingsLib.git"
+    },
+    "authors": [
+        {
+            "name": "Sebastian Koczur",
+            "email": "themechanos@gmail.com"
+        }
+    ],
+    "dependencies": [
+        {
+            "name": "SKVector",
+            "version": "https://github.com/TheMechanos/SKVector.git@1.0.0"
+        },
+        {
+            "owner": "bblanchon",
+            "name": "ArduinoJson",
+            "version": "^7.4.3"
+        }
+    ],
+    "frameworks": "arduino, espidf",
+    "platforms": "*"
+}
