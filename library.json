@@ -1,6 +1,6 @@
 {
     "name": "SettingsLib",
-    "version": "4.0.2",
+    "version": "4.0.3",
     "description": "Library helps in manage application settings",
     "keywords": "settings, parameters, preferences",
     "repository": {

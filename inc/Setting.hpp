@@ -1,18 +1,42 @@
 #pragma once
 
+
+// Platform include
+#if defined(ARDUINO)
+#include <Arduino.h>
+
+#elif defined(ESP_PLATFORM)
 #include <inttypes.h>
 #include <stdint.h>
 
-#if defined(INC_FREERTOS_H) || defined(FREERTOS_CONFIG_H)
+#elif defined(USE_HAL_DRIVER)
+#include <inttypes.h>
+#include <stdint.h>
+
+#elif defined(TI_PLATFORM)
+#include <inttypes.h>
+#include <stdint.h>
+
+#endif
+
+
+// RTOS INCLUDE
+#if __has_include("freertos/FreeRTOS.h")
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 #include "freertos/semphr.h"
+#include "freertos/queue.h"
 #define SETTING_HAS_FREERTOS
 
-#elif __has_include("freertos/FreeRTOS.h")
-#include "freertos/FreeRTOS.h"
-#include "freertos/semphr.h"
+#elif __has_include("FreeRTOS.h")
+#include <FreeRTOS.h>
+#include <task.h>
+#include <semphr.h>
+#include <queue.h>
 #define SETTING_HAS_FREERTOS
 
 #endif
+
 
 #include <ArduinoJson.h>
 #include <SKVector.h>
